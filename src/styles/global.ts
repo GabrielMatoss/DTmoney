@@ -37,7 +37,7 @@ export const GlobalStyle = createGlobalStyle`
         -webkit-font-smoothing: antialised;
     }
 
-    body, input, textarea, button{
+    body, input, textarea, button, table{
         font-family: 'Poppins', sans-serif;
         font-weight: 400;
     }
