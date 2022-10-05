@@ -4,13 +4,13 @@ import logoImg from "../../assets/logo.svg";
 
 import { Container, Content } from "./styles";
 
-interface HeaderProps{
+interface HeaderProps {
     onOpenNewTransactionModal: () => void;
 }
 
-export function Header({ onOpenNewTransactionModal } :HeaderProps){
+export function Header({ onOpenNewTransactionModal }: HeaderProps) {
 
-    return(
+    return (
         <Container>
             <Content>
                 <img src={logoImg} alt="dtmoney logo" />

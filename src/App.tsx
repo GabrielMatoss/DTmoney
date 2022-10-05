@@ -9,28 +9,28 @@ import { GlobalStyle } from "./styles/global";
 Modal.setAppElement("#root");
 
 export function App() {
-    const [isNewTransactionModalOpen, setIsNewTransactionModalOpen] = useState(false);
+  const [isNewTransactionModalOpen, setIsNewTransactionModalOpen] = useState(false);
 
-    function handleOpenNewTransactionModal(){
-      setIsNewTransactionModalOpen(true);
-    }
-  
-    function handleCloseNewTransactionModal(){
-      setIsNewTransactionModalOpen(false);
-    }
+  function handleOpenNewTransactionModal() {
+    setIsNewTransactionModalOpen(true);
+  }
+
+  function handleCloseNewTransactionModal() {
+    setIsNewTransactionModalOpen(false);
+  }
 
   return (
-   <>
-    <Header onOpenNewTransactionModal={handleOpenNewTransactionModal}/>
-    <Dashboard />
+    <>
+      <Header onOpenNewTransactionModal={handleOpenNewTransactionModal} />
+      <Dashboard />
 
-      <NewTransactionsModal 
-      isOpen={isNewTransactionModalOpen}
-      onRequestClose={handleCloseNewTransactionModal}
+      <NewTransactionsModal
+        isOpen={isNewTransactionModalOpen}
+        onRequestClose={handleCloseNewTransactionModal}
       />
 
-    <GlobalStyle />
-   </>
+      <GlobalStyle />
+    </>
   );
 }
 

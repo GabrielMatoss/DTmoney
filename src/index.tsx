@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { createServer } from "miragejs";
-import { App }  from './App';
+import { App } from './App';
 
 
 createServer({
@@ -19,7 +19,7 @@ createServer({
           createdAt: new Date()
         }
       ]
-    })
+    });
   }
 })
 
