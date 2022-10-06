@@ -7,7 +7,7 @@ interface Transaction{
     title: string;
     type: string;
     category: string;
-    amout: number;
+    amount: number;
     createdAt: string;
 }
 
@@ -40,12 +40,12 @@ export function TransactionsTable() {
                            {new Intl.NumberFormat("pt-BR", {
                             style: "currency",
                             currency: "BRL",
-                           }).format(transaction.amout)}
+                           }).format(transaction.amount)}
                         </td>
                         <td>{transaction.category}</td>
                         <td>
                             {new Intl.DateTimeFormat("pt-BR").format(
-                             new Date(transaction.amout)
+                             new Date(transaction.createdAt)
                             )}
                         </td>
                     </tr>
