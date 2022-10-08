@@ -8,8 +8,6 @@ import incomeImg from "../../assets/income.svg";
 
 import { Container, TransactionTypeContainer, RadioBox } from "./styles";
 
-
-
 interface NewTransactionsModalProps {
   isOpen: boolean;
   onRequestClose: () => void;
@@ -23,15 +21,17 @@ export function NewTransactionsModal({ isOpen, onRequestClose }: NewTransactions
   const [category, setCategory] = useState("");
   const [type, setType] = useState("deposit");
 
-  function handleCreateNewTransaction(event: FormEvent) {
+  async function handleCreateNewTransaction(event: FormEvent) {
     event.preventDefault();
 
-    createTransaction({
+    await createTransaction({
       title,
       amount,
       category,
       type
     })
+
+    onRequestClose();
   }
 
   return (
